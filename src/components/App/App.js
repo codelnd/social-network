@@ -1,10 +1,12 @@
+import w from './App.module.css'
+
 const App = () => {
     return (
-        <div>
-            <header>
-                <img src=''/>
+        <div className={w.container}>
+            <header className={w.header}>
+                <img src='' alt='logo'/>
             </header>
-            <nav>
+            <nav className={w.nav}>
                 <ul>
                     <li>Профиль</li>
                     <li>Сообщения</li>
@@ -13,7 +15,7 @@ const App = () => {
                     <li>Настройки</li>
                 </ul>
             </nav>
-            <main></main>
+            <main className={w.main}>gwegewg</main>
         </div>
     );
 }
