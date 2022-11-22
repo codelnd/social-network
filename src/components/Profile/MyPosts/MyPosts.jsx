@@ -1,4 +1,5 @@
 import React from 'react';
+import Post from "./Post/Post";
 
 const MyPosts = () => {
     return (
@@ -9,10 +10,7 @@ const MyPosts = () => {
                 <button>Добавить пост</button>
             </div>
             <div>Новый пост</div>
-            <div>
-                <img src="" alt="image"/>
-                Пост
-            </div>
+            <Post/>
         </div>
     );
 };
