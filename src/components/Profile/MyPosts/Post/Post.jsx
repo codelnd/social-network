@@ -5,6 +5,9 @@ const Post = () => {
             <div>
                 <img src="" alt="image"/>
                 Пост
+                <div>
+                    <span>Нравится</span>
+                </div>
             </div>
     );
 };

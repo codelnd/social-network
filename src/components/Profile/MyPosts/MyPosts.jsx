@@ -9,7 +9,7 @@ const MyPosts = () => {
                 <textarea name="" id="" cols="30" rows="10"></textarea>
                 <button>Добавить пост</button>
             </div>
-            <div>Новый пост</div>
+            {/*<div>Новый пост</div>*/}
             <Post/>
         </div>
     );
