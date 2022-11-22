@@ -1,4 +1,4 @@
-import w from './App.module.css'
+import w from './App.module.scss'
 
 const App = () => {
     return (
