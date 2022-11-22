@@ -1,17 +1,13 @@
+import MyPosts from "./MyPosts/MyPosts";
+
 const Profile = () => {
-return (
-    <section className=''>
-        <img src=''/>
-        <div>Аватар и текст</div>
-        <div>
-            Посты
-            <div>Новый пост</div>
-            <div>
-                Пост
-            </div>
-        </div>
-    </section>
-)
+    return (
+        <section className=''>
+            <img src=''/>
+            <div>Аватар и текст</div>
+            <MyPosts/>
+        </section>
+    )
 }
 
 export default Profile
