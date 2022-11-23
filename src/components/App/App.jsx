@@ -4,6 +4,7 @@ import Navigation from "../Navigation/Navigation";
 import Profile from "../Main/Profile/Profile";
 import Messages from "../Main/Messages/Messages";
 import Main from "../Main/Main";
+import {Route, Routes} from "react-router-dom";
 
 const App = () => {
     return (
@@ -11,8 +12,10 @@ const App = () => {
             <Header/>
             <Navigation/>
             <Main>
-                <Profile/>
-                <Messages/>
+                <Routes>
+                    <Route path='/profile' element={<Profile/>}></Route>
+                    <Route path='/messages' element={<Messages/>}></Route>
+                </Routes>
             </Main>
         </div>
     );
