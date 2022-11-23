@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const Navigation = () => {
     return (
-        <nav className='nav'>
+        <nav className={s.nav}>
             <ul>
                 <li><NavLink className={navLink => navLink.isActive ? s.active : s.link} to='/profile'>Профиль</NavLink></li>
                 <li><NavLink className={navLink => navLink.isActive ? s.active : s.link} to='/messages'>Сообщения</NavLink></li>
