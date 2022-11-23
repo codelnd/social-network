@@ -5,6 +5,9 @@ import Profile from "../Main/Profile/Profile";
 import Messages from "../Main/Messages/Messages";
 import Main from "../Main/Main";
 import {Route, Routes} from "react-router-dom";
+import News from "../Main/News/News";
+import Music from "../Main/Music/Music";
+import Settings from "../Main/Settings/Settings";
 
 const App = () => {
     return (
@@ -15,6 +18,9 @@ const App = () => {
                 <Routes>
                     <Route path='/profile' element={<Profile/>}></Route>
                     <Route path='/messages' element={<Messages/>}></Route>
+                    <Route path='/news' element={<News/>}></Route>
+                    <Route path='/music' element={<Music/>}></Route>
+                    <Route path='/setting' element={<Settings/>}></Route>
                 </Routes>
             </Main>
         </div>

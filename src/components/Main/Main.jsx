@@ -2,7 +2,9 @@ import React from 'react';
 
 const Main = (props) => {
     return (
-        props.children
+        <main className='main'>
+            {props.children}
+        </main>
     );
 };
 
