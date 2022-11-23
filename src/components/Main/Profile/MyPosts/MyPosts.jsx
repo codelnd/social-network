@@ -10,7 +10,8 @@ const MyPosts = () => {
                 <button>Добавить пост</button>
             </div>
             {/*<div>Новый пост</div>*/}
-            <Post/>
+            <Post message={'Привет'}/>
+            <Post message={'Пост №1'}/>
         </div>
     );
 };
