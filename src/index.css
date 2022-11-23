@@ -1,0 +1,13 @@
+.header {
+    grid-area: h;
+    background: gray;
+}
+
+.nav {
+    grid-area: n;
+    background: antiquewhite;
+}
+
+.main {
+    grid-area: m;
+}

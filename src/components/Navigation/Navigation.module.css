@@ -1,0 +1,16 @@
+.nav {
+    grid-area: n;
+    background: antiquewhite;
+}
+
+.link {
+    text-decoration: none;
+    color: gray;
+    font-weight: 500;
+}
+
+.active {
+    text-decoration: none;
+    color: gray;
+    font-weight: 700;
+}

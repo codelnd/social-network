@@ -6,17 +6,3 @@
     grid-template-columns: 2fr 10fr;
     grid-template-rows: 100px 1fr;
 }
-
-.header {
-    grid-area: h;
-    background: gray;
-}
-
-.nav {
-    grid-area: n;
-    background: antiquewhite;
-}
-
-.main {
-    grid-area: m;
-}

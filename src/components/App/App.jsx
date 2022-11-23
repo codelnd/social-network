@@ -1,4 +1,4 @@
-import w from './App.module.scss'
+import s from './App.module.css'
 import Header from "../Header/Header";
 import Navigation from "../Navigation/Navigation";
 import Profile from "../Main/Profile/Profile";
@@ -11,7 +11,7 @@ import Settings from "../Main/Settings/Settings";
 
 const App = () => {
     return (
-        <div className={w.container}>
+        <div className={s.container}>
             <Header/>
             <Navigation/>
             <Main>
@@ -20,7 +20,7 @@ const App = () => {
                     <Route path='/messages' element={<Messages/>}></Route>
                     <Route path='/news' element={<News/>}></Route>
                     <Route path='/music' element={<Music/>}></Route>
-                    <Route path='/setting' element={<Settings/>}></Route>
+                    <Route path='/settings' element={<Settings/>}></Route>
                 </Routes>
             </Main>
         </div>
