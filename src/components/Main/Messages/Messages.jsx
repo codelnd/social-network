@@ -1,18 +1,19 @@
 import React from 'react';
 import s from './Messages.module.css'
+import {NavLink} from "react-router-dom";
 
 const Messages = () => {
     return (
-        <section className={s.dialogs}>
-            <div className={s.dialogs__items}>
-                <div className={`${s.dialog} ${s.active}`}>
-                    Имя 1
+        <section className={s.messages}>
+            <div className={s.names}>
+                <div className={`${s.name} ${s.active}`}>
+                   <NavLink to='/messages/1'>Денис</NavLink>
                 </div>
-                <div className={s.dialog}>
-                    Имя 2
+                <div className={s.name}>
+                    <NavLink to='/messages/2'>Кристина</NavLink>
                 </div>
-                <div className={s.dialog}>
-                    Имя 3
+                <div className={s.name}>
+                    <NavLink to='/messages/3'>Полина</NavLink>
                 </div>
             </div>
             <div className={s.messages}>
