@@ -14,9 +14,6 @@ const Messages = () => {
                 </div>
             </div>
             <div className={s.messages__items}>
-                <div className={s.message}>Сообщение 1</div>
-                <div className={s.message}>Сообщение 2</div>
-                <div className={s.message}>Сообщение 3</div>
             </div>
         </section>
     );
