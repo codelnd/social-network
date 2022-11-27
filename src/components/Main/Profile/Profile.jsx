@@ -1,10 +1,10 @@
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
-        <section className=''>
-            <img src=''/>
-            <div>Аватар и текст</div>
+        <section className='profile'>
+            <ProfileInfo/>
             <MyPosts/>
         </section>
     )
