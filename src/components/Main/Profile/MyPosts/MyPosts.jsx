@@ -4,15 +4,15 @@ import s from "./MyPosts.module.css"
 
 const MyPosts = () => {
     return (
-        <div>
+        <section className={s.posts}>
             Посты
             <div>
                 <textarea name="" id="" cols="20" rows="4"></textarea>
-                <button>Добавить пост</button>
+                <button className={s.add}>Добавить пост</button>
             </div>
             <Post message={'Привет'}/>
             <Post message={'Пост №1'}/>
-        </div>
+        </section>
     );
 };
 
