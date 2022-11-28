@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 import s from "./Name.module.css";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Name = ({id, name}) => {
-    return (
-        <div className={`${s.name} ${s.active}`}>
-            <NavLink to={`/messages/${id}`}>{name}</NavLink>
-        </div>
-    );
+const Name = ({ id, name }) => {
+  return (
+    <NavLink
+      className={(navLink) => (navLink.isActive ? s.active : s.link)}
+      to={`/messages/${id}`}
+    >
+      {name}
+    </NavLink>
+  );
 };
 
 export default Name;

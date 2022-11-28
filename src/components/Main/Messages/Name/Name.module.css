@@ -1,6 +1,12 @@
-.name {
+.link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
 
-.name .active {
+
+.active {
+    text-decoration: none;
+    font-weight: 700;
     color: gold;
 }
