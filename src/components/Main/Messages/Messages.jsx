@@ -4,17 +4,47 @@ import Name from "./Name/Name";
 import Message from "./Message/Message";
 
 const Messages = () => {
+    const nameData = [
+        {
+            id: 1,
+            name: 'Денис'
+        },
+        {
+            id: 2,
+            name: 'Ваня'
+        }, {
+            id: 3,
+            name: 'Виталя'
+        }, {
+            id: 4,
+            name: 'Полина'
+        },
+    ]
+    const messageData = [
+        {
+            id: 1,
+            message: 'Hi, bro'
+        },
+        {
+            id: 2,
+            message: 'Ok'
+        },
+        {
+            id: 3,
+            message: 'What is it?'
+        },
+        {
+            id: 4,
+            message: 'How are you?'
+        },
+    ]
     return (
         <section className={s.messages}>
             <div className={s.names}>
-                    <Name id='1' name='Денис'/>
-                    <Name id='2' name='Кристина'/>
-                    <Name id='3' name='Полина'/>
+                {nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)}
             </div>
             <div className={s.messages__items}>
-                <Message message="Hi, bro"/>
-                <Message message="How are you?"/>
-                <Message message="What is it?"/>
+                {messageData.map(m => <Message key={m.id} message={m.message}/>)}
             </div>
         </section>
     );
