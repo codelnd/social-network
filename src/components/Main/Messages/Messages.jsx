@@ -38,13 +38,15 @@ const Messages = () => {
             message: 'How are you?'
         },
     ]
+    const namesRender = nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
+    const messagesRender = messageData.map(m => <Message key={m.id} message={m.message}/>)
     return (
         <section className={s.messages}>
             <div className={s.names}>
-                {nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)}
+                {namesRender}
             </div>
             <div className={s.messages__items}>
-                {messageData.map(m => <Message key={m.id} message={m.message}/>)}
+                {messagesRender}
             </div>
         </section>
     );
