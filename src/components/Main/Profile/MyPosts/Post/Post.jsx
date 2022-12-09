@@ -1,14 +1,16 @@
 import React from 'react';
+import s from './Post.module.css'
 
-const Post = (props) => {
+const Post = ({message, likes}) => {
     return (
+        <div>
+            <img className={s.avatar} src="https://galerey-room.ru/img_2/8c0c049d592c676f1c235b134c8a059b.jpg"
+                 alt="image"/>
+            {message}
             <div>
-                <img src="src/components/Main/Profile/MyPosts/Post/Post" alt="image"/>
-                {props.message}
-                <div>
-                    <span>Нравится</span>
-                </div>
+                <span>{likes}</span>
             </div>
+        </div>
     );
 };
 

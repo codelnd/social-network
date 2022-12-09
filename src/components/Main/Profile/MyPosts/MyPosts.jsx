@@ -3,15 +3,32 @@ import Post from "./Post/Post";
 import s from "./MyPosts.module.css"
 
 const MyPosts = () => {
+    const postData = [
+        {
+            id: 1,
+            message: 'Всем привет',
+            likes: 10
+        },
+        {
+            id: 2,
+            message: 'Мой первый пост',
+            likes: 4
+        },
+        {
+            id: 3,
+            message: 'Освоил redux!',
+            likes: 99
+        },
+    ]
+    const postsRender = postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     return (
         <section className={s.posts}>
             Посты
             <div>
-                <textarea name="" id="" cols="20" rows="4"></textarea>
+                <textarea></textarea>
                 <button className={s.add}>Добавить пост</button>
             </div>
-            <Post message={'Привет'}/>
-            <Post message={'Пост №1'}/>
+            {postsRender}
         </section>
     );
 };
