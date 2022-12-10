@@ -3,23 +3,7 @@ import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
 
-const Messages = () => {
-    const nameData = [
-        {
-            id: 1,
-            name: 'Денис'
-        },
-        {
-            id: 2,
-            name: 'Ваня'
-        }, {
-            id: 3,
-            name: 'Виталя'
-        }, {
-            id: 4,
-            name: 'Полина'
-        },
-    ]
+const Messages = ({nameData}) => {
     const messageData = [
         {
             id: 1,

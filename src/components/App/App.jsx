@@ -9,7 +9,8 @@ import News from "../Main/News/News";
 import Music from "../Main/Music/Music";
 import Settings from "../Main/Settings/Settings";
 
-const App = () => {
+const App = ({nameData}) => {
+
     return (
         <div className={s.container}>
             <Header/>
@@ -17,7 +18,7 @@ const App = () => {
             <Main>
                 <Routes>
                     <Route path='/profile' element={<Profile/>}></Route>
-                    <Route path='/messages/*' element={<Messages/>}></Route>
+                    <Route path='/messages/*' element={<Messages nameData={nameData}/>}></Route>
                     <Route path='/news' element={<News/>}></Route>
                     <Route path='/music' element={<Music/>}></Route>
                     <Route path='/settings' element={<Settings/>}></Route>
