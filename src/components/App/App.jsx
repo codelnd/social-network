@@ -10,7 +10,6 @@ import Music from "../Main/Music/Music";
 import Settings from "../Main/Settings/Settings";
 
 const App = ({nameData, messageData, postData}) => {
-
     return (
         <div className={s.container}>
             <Header/>
