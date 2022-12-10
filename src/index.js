@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <BrowserRouter>
-        <App nameData={state.nameData} messageData={state.messageData} postData={state.postData}/>
+        <App state={state}/>
     </BrowserRouter>
 );
