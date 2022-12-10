@@ -39,9 +39,26 @@ const messageData = [
         message: 'How are you?'
     },
 ]
+const postData = [
+    {
+        id: 1,
+        message: 'Всем привет',
+        likes: 10
+    },
+    {
+        id: 2,
+        message: 'Мой первый пост',
+        likes: 4
+    },
+    {
+        id: 3,
+        message: 'Освоил redux!',
+        likes: 99
+    },
+]
 
 root.render(
     <BrowserRouter>
-        <App nameData={nameData} messageData={messageData}/>
+        <App nameData={nameData} messageData={messageData} postData={postData}/>
     </BrowserRouter>
 );
