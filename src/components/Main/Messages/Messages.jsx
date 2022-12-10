@@ -3,25 +3,7 @@ import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
 
-const Messages = ({nameData}) => {
-    const messageData = [
-        {
-            id: 1,
-            message: 'Hi, bro'
-        },
-        {
-            id: 2,
-            message: 'Ok'
-        },
-        {
-            id: 3,
-            message: 'What is it?'
-        },
-        {
-            id: 4,
-            message: 'How are you?'
-        },
-    ]
+const Messages = ({nameData, messageData}) => {
     const namesRender = nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
     const messagesRender = messageData.map(m => <Message key={m.id} message={m.message}/>)
     return (
