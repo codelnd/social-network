@@ -2,13 +2,13 @@ import React from "react";
 import s from "./Name.module.css";
 import { NavLink } from "react-router-dom";
 
-const Name = ({ id, name }) => {
+const Name = (props) => {
   return (
     <NavLink
       className={(navLink) => (navLink.isActive ? s.active : s.link)}
-      to={`/messages/${id}`}
+      to={`/messages/${props.id}`}
     >
-      {name}
+      {props.name}
     </NavLink>
   );
 };
