@@ -1,4 +1,9 @@
 .header {
     grid-area: h;
-    background: gray;
+}
+
+.link {
+    text-decoration: none;
+    padding: 0;
+    color: #fff;
 }
