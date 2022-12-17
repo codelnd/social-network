@@ -6,6 +6,9 @@ import Message from "./Message/Message";
 const Messages = (props) => {
     const namesRender = props.state.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
     const messagesRender = props.state.messageData.map(m => <Message key={m.id} message={m.message}/>)
+    const addMessage = () => {
+
+    }
     return (
         <section className={s.messages}>
             <div className={s.names}>
@@ -16,7 +19,7 @@ const Messages = (props) => {
             </div>
             <div>
                 <textarea></textarea>
-                <button>Отправить</button>
+                <button onClick={addMessage}>Отправить</button>
             </div>
         </section>
     );
