@@ -4,10 +4,9 @@ import s from "./MyPosts.module.css"
 
 const MyPosts = (props) => {
     const postsRender = props.state.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
-    const ref = React.createRef()
-    console.log(ref)
+    const postRef = React.createRef()
     const addPost = () => {
-        const value = ref.current.value
+        const value = postRef.current.value
         console.log(value)
     }
 
@@ -15,7 +14,7 @@ const MyPosts = (props) => {
         <section className={s.posts}>
             Посты
             <div>
-                <textarea ref={ref}></textarea>
+                <textarea ref={postRef}></textarea>
                 <button onClick={addPost} className={s.add}>Добавить пост</button>
             </div>
             {postsRender}
