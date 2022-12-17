@@ -6,8 +6,10 @@ import Message from "./Message/Message";
 const Messages = (props) => {
     const namesRender = props.state.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
     const messagesRender = props.state.messageData.map(m => <Message key={m.id} message={m.message}/>)
+    const ref = React.createRef()
     const addMessage = () => {
-
+        const value = ref.current.value
+        console.log(value)
     }
     return (
         <section className={s.messages}>
@@ -18,7 +20,7 @@ const Messages = (props) => {
                 {messagesRender}
             </div>
             <div>
-                <textarea></textarea>
+                <textarea ref={ref}></textarea>
                 <button onClick={addMessage}>Отправить</button>
             </div>
         </section>
