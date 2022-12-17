@@ -14,6 +14,10 @@ const Messages = (props) => {
             <div className={s.messages__items}>
                 {messagesRender}
             </div>
+            <div>
+                <textarea></textarea>
+                <button>Отправить</button>
+            </div>
         </section>
     );
 };
