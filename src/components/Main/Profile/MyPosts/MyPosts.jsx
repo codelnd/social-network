@@ -8,6 +8,7 @@ const MyPosts = (props) => {
     const addPost = () => {
         const value = postRef.current.value
         console.log(value)
+        props.addPost(value)
     }
 
     return (

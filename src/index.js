@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './components/App/App';
 import {BrowserRouter} from "react-router-dom";
-import state from "./state/state";
+import state, {addPost} from "./state/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <BrowserRouter>
-        <App state={state}/>
+        <App state={state} addPost={addPost}/>
     </BrowserRouter>
 );

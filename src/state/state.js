@@ -56,7 +56,7 @@ const state = {
     },
 }
 
-const addPost = (message) => {
+export const addPost = (message) => {
     const newPost = {
         id: 4,
         message,
