@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css"
 
 const MyPosts = (props) => {
     const postsRender = props.state.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
-    const postRef = React.createRef()
+    const postRef = useRef()
     const addPost = () => {
         const value = postRef.current.value
         console.log(value)

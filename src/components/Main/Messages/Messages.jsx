@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
@@ -6,7 +6,7 @@ import Message from "./Message/Message";
 const Messages = (props) => {
     const namesRender = props.state.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
     const messagesRender = props.state.messageData.map(m => <Message key={m.id} message={m.message}/>)
-    const messageRef = React.createRef()
+    const messageRef = useRef()
     const addMessage = () => {
         const value = messageRef.current.value
         console.log(value)
