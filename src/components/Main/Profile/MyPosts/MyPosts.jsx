@@ -3,7 +3,7 @@ import Post from "./Post/Post";
 import s from "./MyPosts.module.css"
 
 const MyPosts = (props) => {
-    const postsRender = props.state.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
+    const postsRender = props.state.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
     const addPost = () => {
         const value = postRef.current.value

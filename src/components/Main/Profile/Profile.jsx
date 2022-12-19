@@ -5,7 +5,7 @@ const Profile = (props) => {
     return (
         <section className='profile'>
             <ProfileInfo/>
-            <MyPosts state={props.state}/>
+            <MyPosts state={props.state.postData}/>
         </section>
     )
 }
