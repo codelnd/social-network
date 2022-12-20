@@ -1,3 +1,4 @@
+import {rerender} from "../render";
 
 
 const state = {
@@ -65,6 +66,7 @@ export const addPost = (message) => {
         likes: 0
     }
     state.profilePage.postData.push(newPost)
+    rerender(state)
 }
 
 export default state
