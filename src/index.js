@@ -7,8 +7,13 @@ import state, {addPost} from "./state/state";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(
-    <BrowserRouter>
-        <App state={state} addPost={addPost}/>
-    </BrowserRouter>
-);
+const rerender = () => {
+    root.render(
+        <BrowserRouter>
+            <App state={state} addPost={addPost}/>
+        </BrowserRouter>
+    );
+}
+
+
+rerender()
