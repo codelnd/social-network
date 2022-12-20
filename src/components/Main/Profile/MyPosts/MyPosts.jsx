@@ -7,7 +7,6 @@ const MyPosts = (props) => {
     const postRef = React.createRef()
     const addPost = () => {
         const value = postRef.current.value
-        console.log(value)
         props.addPost(value)
     }
 

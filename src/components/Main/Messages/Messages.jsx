@@ -9,7 +9,6 @@ const Messages = (props) => {
     const messageRef = React.createRef()
     const addMessage = () => {
         const value = messageRef.current.value
-        console.log(value)
     }
     return (
         <section className={s.messages}>
