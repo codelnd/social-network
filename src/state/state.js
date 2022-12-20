@@ -60,13 +60,19 @@ const state = {
     },
 }
 
-export const addPost = (message) => {
+export const addPost = () => {
     const newPost = {
         id: 4,
-        message,
+        message: state.profilePage.newPostMessage,
         likes: 0
     }
     state.profilePage.postData.push(newPost)
+    rerender(state)
+    state.profilePage.newPostMessage = ''
+}
+
+export const updatePostMessage = (message) => {
+    state.profilePage.newPostMessage = message
     rerender(state)
 }
 

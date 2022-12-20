@@ -5,13 +5,14 @@ import s from "./MyPosts.module.css"
 const MyPosts = (props) => {
     const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
+
     const addPost = () => {
-        const value = postRef.current.value
-        props.addPost(value)
-        postRef.current.value = ''
+        props.addPost()
     }
-    const changeHandler = (e) => {
-        console.log(e.target.value)
+
+    const changeHandler = () => {
+        const value = postRef.current.value
+        props.updatePostMessage(value)
     }
 
 
