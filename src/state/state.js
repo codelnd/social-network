@@ -55,7 +55,8 @@ const state = {
                 message: 'Освоил redux!',
                 likes: 99
             },
-        ]
+        ],
+        newPostMessage: ''
     },
 }
 
