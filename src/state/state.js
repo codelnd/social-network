@@ -69,12 +69,12 @@ export const addPost = () => {
     }
     state.profilePage.postData.push(newPost)
     state.profilePage.newPostMessage = ''
-    rerender()
+    rerender(state)
 }
 
 export const updatePostMessage = (message) => {
     state.profilePage.newPostMessage = message
-    rerender()
+    rerender(state)
 }
 
 export const subscribe = (observer) => {
