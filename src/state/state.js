@@ -1,6 +1,3 @@
-import {rerender} from "../render";
-
-
 const state = {
     messagesPage: {
         nameData: [
@@ -59,6 +56,11 @@ const state = {
         newPostMessage: ''
     },
 }
+window.state = state
+
+export let rerender = () => {
+    console.log('Hello!')
+}
 
 export const addPost = () => {
     const newPost = {
@@ -75,5 +77,10 @@ export const updatePostMessage = (message) => {
     state.profilePage.newPostMessage = message
     rerender(state)
 }
+
+export const subscribe = (observer) => {
+
+}
+
 
 export default state
