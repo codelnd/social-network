@@ -56,10 +56,9 @@ const state = {
         newPostMessage: ''
     },
 }
-window.state = state
 
 export let rerender = () => {
-    console.log('Hello!')
+    console.log('Заглушка')
 }
 
 export const addPost = () => {
@@ -69,17 +68,17 @@ export const addPost = () => {
         likes: 0
     }
     state.profilePage.postData.push(newPost)
-    rerender(state)
     state.profilePage.newPostMessage = ''
+    rerender()
 }
 
 export const updatePostMessage = (message) => {
     state.profilePage.newPostMessage = message
-    rerender(state)
+    rerender()
 }
 
 export const subscribe = (observer) => {
-
+    rerender = observer
 }
 
 

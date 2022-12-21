@@ -17,6 +17,6 @@ const rerender = () => {
     );
 }
 
-rerender(state)
+rerender()
 
 subscribe(rerender)
