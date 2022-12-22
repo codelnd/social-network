@@ -1,5 +1,3 @@
-import state from "../state/state";
-
 const store = {
     _state: {
         messagesPage: {
@@ -75,7 +73,7 @@ const store = {
     addPost() {
         const newPost = {
             id: 4,
-            message: state.profilePage.newPostMessage,
+            message: this._state.profilePage.newPostMessage,
             likes: 0
         }
         this._state.profilePage.postData.push(newPost)
@@ -89,3 +87,5 @@ const store = {
     }
 
 }
+
+export default store
