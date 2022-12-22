@@ -1,4 +1,8 @@
 const store = {
+    _subscriber() {
+        console.log('no subscribers')
+    },
+
     _state: {
         messagesPage: {
             nameData: [
@@ -57,5 +61,9 @@ const store = {
             newPostMessage: ''
         },
     },
+
+    getState() {
+        return this._state
+    }
 
 }
