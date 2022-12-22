@@ -9,7 +9,7 @@ import App from "./components/App/App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const rerender = () => {
+const rerender = (state) => {
     root.render(
         <BrowserRouter>
             <App state={state} addPost={addPost} updatePostMessage={updatePostMessage}/>
