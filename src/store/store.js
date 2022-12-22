@@ -1,8 +1,6 @@
-const store = {
-    _subscriber() {
-        console.log('no subscribers')
-    },
+import state from "../state/state";
 
+const store = {
     _state: {
         messagesPage: {
             nameData: [
@@ -62,12 +60,27 @@ const store = {
         },
     },
 
+    _subscriber() {
+        console.log('no subscribers')
+    },
+
     getState() {
         return this._state
     },
 
     subscribe(observer) {
         this._subscriber = observer
+    },
+
+    addPost() {
+        const newPost = {
+            id: 4,
+            message: state.profilePage.newPostMessage,
+            likes: 0
+        }
+        this._state.profilePage.postData.push(newPost)
+        this._state.profilePage.newPostMessage = ''
+        this.subscribe()
     }
 
 }
