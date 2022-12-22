@@ -81,6 +81,11 @@ const store = {
         this._state.profilePage.postData.push(newPost)
         this._state.profilePage.newPostMessage = ''
         this.subscribe()
+    },
+
+    updatePost(message) {
+        this._state.profilePage.newPostMessage = message
+        this.subscribe()
     }
 
 }
