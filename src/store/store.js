@@ -1,5 +1,3 @@
-import state, {rerender} from "../state/state";
-
 const store = {
     _state: {
         messagesPage: {
@@ -69,23 +67,23 @@ const store = {
     },
 
     subscribe(observer) {
-        rerender = observer
+        this.rerender = observer
     },
 
     addPost() {
         const newPost = {
             id: 4,
-            message: state.profilePage.newPostMessage,
+            message: this._state.profilePage.newPostMessage,
             likes: 0
         }
-        state.profilePage.postData.push(newPost)
-        state.profilePage.newPostMessage = ''
-        rerender(state)
+        this._state.profilePage.postData.push(newPost)
+        this._state.profilePage.newPostMessage = ''
+        this.rerender(this._state)
     },
 
     updatePost(message) {
-        state.profilePage.newPostMessage = message
-        rerender(state)
+        this._state.profilePage.newPostMessage = message
+        this.rerender(this._state)
     }
 
 }
