@@ -1,3 +1,5 @@
+import state, {rerender} from "../state/state";
+
 const store = {
     _state: {
         messagesPage: {
@@ -58,7 +60,7 @@ const store = {
         },
     },
 
-    _subscriber() {
+    rerender() {
         console.log('no subscribers')
     },
 
@@ -67,23 +69,23 @@ const store = {
     },
 
     subscribe(observer) {
-        this._subscriber = observer
+        rerender = observer
     },
 
     addPost() {
         const newPost = {
             id: 4,
-            message: this._state.profilePage.newPostMessage,
+            message: state.profilePage.newPostMessage,
             likes: 0
         }
-        this._state.profilePage.postData.push(newPost)
-        this._state.profilePage.newPostMessage = ''
-        this.subscribe()
+        state.profilePage.postData.push(newPost)
+        state.profilePage.newPostMessage = ''
+        rerender(state)
     },
 
     updatePost(message) {
-        this._state.profilePage.newPostMessage = message
-        this.subscribe()
+        state.profilePage.newPostMessage = message
+        rerender(state)
     }
 
 }
