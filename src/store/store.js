@@ -58,7 +58,7 @@ const store = {
         },
     },
 
-    rerender() {
+    _callSubscriber() {
         console.log('no subscribers')
     },
 
@@ -67,7 +67,7 @@ const store = {
     },
 
     subscribe(observer) {
-        this.rerender = observer
+        this._callSubscriber = observer
     },
 
     addPost() {
@@ -78,12 +78,12 @@ const store = {
         }
         this._state.profilePage.postData.push(newPost)
         this._state.profilePage.newPostMessage = ''
-        this.rerender(this._state)
+        this._callSubscriber(this._state)
     },
 
     updatePost(message) {
         this._state.profilePage.newPostMessage = message
-        this.rerender(this._state)
+        this._callSubscriber(this._state)
     }
 
 }
