@@ -12,7 +12,7 @@ const MyPosts = (props) => {
 
     const changeHandler = () => {
         const value = postRef.current.value
-        props.updatePostMessage(value)
+        props.updatePost(value)
     }
 
 
