@@ -7,6 +7,7 @@ const MyPosts = (props) => {
     const postRef = React.createRef()
 
     const addPost = () => {
+        console.log(props)
         props.addPost()
     }
 

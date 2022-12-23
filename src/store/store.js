@@ -71,7 +71,6 @@ const store = {
     },
 
     addPost() {
-        debugger
         const newPost = {
             id: 4,
             message: this._state.profilePage.newPostMessage,
