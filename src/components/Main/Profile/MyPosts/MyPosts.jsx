@@ -12,7 +12,7 @@ const MyPosts = (props) => {
         })
     }
 
-    const changeHandler = () => {
+    const onPostChange = () => {
         const message = postRef.current.value
         props.dispatch({
             type: "UPDATE-POST",
@@ -20,12 +20,11 @@ const MyPosts = (props) => {
         })
     }
 
-
     return (
         <section className={s.posts}>
             Посты
             <div>
-                <textarea ref={postRef} value={props.newPostMessage} onChange={changeHandler}/>
+                <textarea ref={postRef} value={props.newPostMessage} onChange={onPostChange}/>
                 <button onClick={addPost} className={s.add}>Добавить пост</button>
             </div>
             {postsRender}
