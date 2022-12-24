@@ -70,6 +70,22 @@ const store = {
         this._callSubscriber = observer
     },
 
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
+            const newPost = {
+                id: 4,
+                message: this._state.profilePage.newPostMessage,
+                likes: 0
+            }
+            this._state.profilePage.postData.push(newPost)
+            this._state.profilePage.newPostMessage = ''
+            this._callSubscriber(this._state)
+        } else if (action.type === "UPDATE-POST") {
+            this._state.profilePage.newPostMessage = action.message
+            this._callSubscriber(this._state)
+        }
+    },
+
     addPost() {
         const newPost = {
             id: 4,
