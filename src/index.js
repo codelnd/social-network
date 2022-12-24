@@ -6,13 +6,12 @@ import App from "./components/App/App";
 import store from "./store/store";
 
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const rerender = (state) => {
     root.render(
         <BrowserRouter>
-            <App state={state} addPost={store.addPost.bind(store)} updatePost={store.updatePost.bind(store)}/>
+            <App state={state} dispatch={store.dispatch.bind(store)}/>
         </BrowserRouter>
     );
 }
