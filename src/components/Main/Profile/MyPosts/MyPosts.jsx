@@ -5,9 +5,11 @@ import s from "./MyPosts.module.css"
 const MyPosts = (props) => {
     const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
-
+    console.log(props.dispatch)
     const addPost = () => {
-        props.addPost()
+        props.dispatch({
+            type: "ADD-POST"
+        })
     }
 
     const changeHandler = () => {
