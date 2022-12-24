@@ -14,10 +14,11 @@ const MyPosts = (props) => {
 
     const onPostChange = () => {
         const message = postRef.current.value
-        props.dispatch({
+        const action = {
             type: "UPDATE-POST",
-            message
-        })
+            message: message
+        };
+        props.dispatch(action)
     }
 
     return (

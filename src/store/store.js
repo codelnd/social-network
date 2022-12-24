@@ -85,23 +85,6 @@ const store = {
             this._callSubscriber(this._state)
         }
     },
-
-    addPost() {
-        const newPost = {
-            id: 4,
-            message: this._state.profilePage.newPostMessage,
-            likes: 0
-        }
-        this._state.profilePage.postData.push(newPost)
-        this._state.profilePage.newPostMessage = ''
-        this._callSubscriber(this._state)
-    },
-
-    updatePost(message) {
-        this._state.profilePage.newPostMessage = message
-        this._callSubscriber(this._state)
-    }
-
 }
 
 export default store
