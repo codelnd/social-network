@@ -1,24 +1,12 @@
 import React from 'react';
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css"
+import {addPostActionCreator, updatePostActionCreator} from "../../../../store/store";
 
-const addPostActionCreator = () => {
-    return {
-        type: "ADD-POST"
-    }
-}
-
-const updatePostActionCreator = (message) => {
-    return {
-        type: "UPDATE-POST",
-        message: message
-    }
-}
 
 const MyPosts = (props) => {
     const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
-
 
     const addPost = () => {
         props.dispatch(addPostActionCreator())
@@ -26,7 +14,8 @@ const MyPosts = (props) => {
 
     const onPostChange = () => {
         const message = postRef.current.value
-        props.dispatch(updatePostActionCreator(message))
+        const action = updatePostActionCreator(message)
+        props.dispatch(action)
     }
 
     return (

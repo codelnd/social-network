@@ -87,4 +87,17 @@ const store = {
     },
 }
 
+export const addPostActionCreator = () => {
+    return {
+        type: "ADD-POST"
+    }
+}
+
+export const updatePostActionCreator = (message) => {
+    return {
+        type: "UPDATE-POST",
+        message: message
+    }
+}
+
 export default store
