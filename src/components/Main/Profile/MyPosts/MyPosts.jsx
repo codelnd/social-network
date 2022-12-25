@@ -2,14 +2,19 @@ import React from 'react';
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css"
 
+const addPostActionCreator = () => {
+    return {
+        type: "ADD-POST"
+    }
+}
+
 const MyPosts = (props) => {
     const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
 
+
     const addPost = () => {
-        props.dispatch({
-            type: "ADD-POST"
-        })
+        props.dispatch(addPostActionCreator())
     }
 
     const onPostChange = () => {
