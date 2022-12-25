@@ -8,6 +8,13 @@ const addPostActionCreator = () => {
     }
 }
 
+const updatePostActionCreator = (message) => {
+    return {
+        type: "UPDATE-POST",
+        message: message
+    }
+}
+
 const MyPosts = (props) => {
     const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
@@ -19,11 +26,7 @@ const MyPosts = (props) => {
 
     const onPostChange = () => {
         const message = postRef.current.value
-        const action = {
-            type: "UPDATE-POST",
-            message: message
-        };
-        props.dispatch(action)
+        props.dispatch(updatePostActionCreator(message))
     }
 
     return (
