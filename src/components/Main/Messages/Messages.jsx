@@ -14,8 +14,9 @@ const Messages = (props) => {
     }
 
     const onMessageChange = () => {
-        const value = messageRef.current.value
-        props.dispatch(updateMessageActionCreator(value))
+        const message = messageRef.current.value
+        const action = updateMessageActionCreator(message);
+        props.dispatch(action)
     }
 
     return (
@@ -27,7 +28,7 @@ const Messages = (props) => {
                 {messagesRender}
             </div>
             <div>
-                <textarea ref={messageRef} onChange={onMessageChange} value={props.newMessage}></textarea>
+                <textarea ref={messageRef} onChange={onMessageChange} value={props.newMessage}/>
                 <button onClick={addMessage}>Отправить</button>
             </div>
         </section>
