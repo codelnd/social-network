@@ -1,6 +1,7 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_POST = "UPDATE_POST";
 const ADD_MESSAGE = "ADD_MESSAGE";
+const UPDATE_MESSAGE = "UPDATE_MESSAGE";
 
 const store = {
     _state: {
@@ -116,6 +117,13 @@ export const updatePostActionCreator = (message) => {
 export const addMessageActionCreator = () => {
     return {
         type: ADD_MESSAGE,
+    }
+}
+
+export const updateMessageActionCreator = (message) => {
+    return {
+        type: UPDATE_MESSAGE,
+        message: message
     }
 }
 
