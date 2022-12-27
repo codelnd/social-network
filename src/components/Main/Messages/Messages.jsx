@@ -7,6 +7,7 @@ const Messages = (props) => {
     const namesRender = props.state.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
     const messagesRender = props.state.messageData.map(m => <Message key={m.id} message={m.message}/>)
     const messageRef = React.createRef()
+
     const addMessage = () => {
         const value = messageRef.current.value
     }

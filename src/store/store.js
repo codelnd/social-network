@@ -1,5 +1,6 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_POST = "UPDATE_POST";
+const ADD_MESSAGE = "ADD_MESSAGE";
 
 const store = {
     _state: {
@@ -99,6 +100,13 @@ export const addPostActionCreator = () => {
 export const updatePostActionCreator = (message) => {
     return {
         type: UPDATE_POST,
+        message: message
+    }
+}
+
+export const addMessageActionCreator = (message) => {
+    return {
+        type: ADD_MESSAGE,
         message: message
     }
 }
