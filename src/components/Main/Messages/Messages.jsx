@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
+import {addMessageActionCreator} from "../../../store/store";
 
 const Messages = (props) => {
     const namesRender = props.messagesPage.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
@@ -10,6 +11,7 @@ const Messages = (props) => {
 
     const addMessage = () => {
         const value = messageRef.current.value
+        props.dispatch(addMessageActionCreator('Привет!'))
     }
     return (
         <section className={s.messages}>
