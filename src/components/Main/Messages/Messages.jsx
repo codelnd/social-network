@@ -10,9 +10,13 @@ const Messages = (props) => {
     const messageRef = React.createRef()
 
     const addMessage = () => {
-        const value = messageRef.current.value
         props.dispatch(addMessageActionCreator())
     }
+
+    const onMessageChange = (message) => {
+        const value = messageRef.current.value
+    }
+
     return (
         <section className={s.messages}>
             <div className={s.names}>
@@ -22,7 +26,7 @@ const Messages = (props) => {
                 {messagesRender}
             </div>
             <div>
-                <textarea ref={messageRef}></textarea>
+                <textarea ref={messageRef} onChange={onMessageChange} value={props.messagesPages}></textarea>
                 <button onClick={addMessage}>Отправить</button>
             </div>
         </section>
