@@ -113,10 +113,9 @@ export const updatePostActionCreator = (message) => {
     }
 }
 
-export const addMessageActionCreator = (message) => {
+export const addMessageActionCreator = () => {
     return {
         type: ADD_MESSAGE,
-        message: message
     }
 }
 

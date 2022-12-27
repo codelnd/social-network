@@ -11,7 +11,7 @@ const Messages = (props) => {
 
     const addMessage = () => {
         const value = messageRef.current.value
-        props.dispatch(addMessageActionCreator('Привет!'))
+        props.dispatch(addMessageActionCreator())
     }
     return (
         <section className={s.messages}>
