@@ -97,6 +97,9 @@ const store = {
             this._state.messagesPage.messageData.push(newMessage)
             this._state.messagesPage.newMessage = ''
             this._callSubscriber(this._state)
+        } else if (action.type === UPDATE_MESSAGE) {
+            this._state.messagesPage.newMessage = action.message
+            this._callSubscriber(this._state)
         }
     },
 }
