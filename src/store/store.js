@@ -39,6 +39,7 @@ const store = {
                     message: 'How are you?'
                 },
             ],
+            newMessage: '',
         },
         profilePage: {
             postData: [
@@ -58,7 +59,7 @@ const store = {
                     likes: 99
                 },
             ],
-            newPostMessage: ''
+            newPostMessage: '',
         },
     },
 
@@ -86,6 +87,14 @@ const store = {
             this._callSubscriber(this._state)
         } else if (action.type === UPDATE_POST) {
             this._state.profilePage.newPostMessage = action.message
+            this._callSubscriber(this._state)
+        } else if (action.type === ADD_MESSAGE) {
+            const newMessage = {
+                id: 5,
+                message: this._state.messagesPage.newMessage
+            }
+            this._state.messagesPage.messageData.push(newMessage)
+            this._state.messagesPage.newMessage = ''
             this._callSubscriber(this._state)
         }
     },
