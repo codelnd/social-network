@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
-import {addMessageActionCreator} from "../../../store/store";
+import {addMessageActionCreator, updateMessageActionCreator} from "../../../store/store";
 
 const Messages = (props) => {
     const namesRender = props.messagesPage.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
@@ -15,6 +15,7 @@ const Messages = (props) => {
 
     const onMessageChange = () => {
         const value = messageRef.current.value
+        props.dispatch(updateMessageActionCreator(value))
     }
 
     return (
