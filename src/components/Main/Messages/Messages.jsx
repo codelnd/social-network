@@ -9,7 +9,7 @@ const Messages = (props) => {
     const messagesRender = props.messagesPage.messageData.map(m => <Message key={m.id} message={m.message}/>)
     const messageRef = React.createRef()
 
-    const addMessage = () => {
+    const sendMessage = () => {
         props.dispatch(sendMessageCreator())
     }
 
@@ -29,7 +29,7 @@ const Messages = (props) => {
             </div>
             <div>
                 <textarea ref={messageRef} onChange={onMessageChange} value={props.newMessage}/>
-                <button onClick={addMessage}>Отправить</button>
+                <button onClick={sendMessage}>Отправить</button>
             </div>
         </section>
     );
