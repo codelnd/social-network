@@ -1,5 +1,5 @@
 const ADD_POST = "ADD_POST";
-const UPDATE_POST = "UPDATE_POST";
+const UPDATE_POST_MESSAGE = "UPDATE_POST";
 const ADD_MESSAGE = "ADD_MESSAGE";
 const UPDATE_MESSAGE = "UPDATE_MESSAGE";
 
@@ -86,7 +86,7 @@ const store = {
             this._state.profilePage.postData.push(newPost)
             this._state.profilePage.newPostMessage = ''
             this._callSubscriber(this._state)
-        } else if (action.type === UPDATE_POST) {
+        } else if (action.type === UPDATE_POST_MESSAGE) {
             this._state.profilePage.newPostMessage = action.message
             this._callSubscriber(this._state)
         } else if (action.type === ADD_MESSAGE) {
@@ -112,7 +112,7 @@ export const addPostActionCreator = () => {
 
 export const updatePostActionCreator = (message) => {
     return {
-        type: UPDATE_POST,
+        type: UPDATE_POST_MESSAGE,
         message: message
     }
 }
