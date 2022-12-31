@@ -1,6 +1,6 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_POST_MESSAGE = "UPDATE_POST";
-const ADD_MESSAGE = "ADD_MESSAGE";
+const SEND_MESSAGE = "ADD_MESSAGE";
 const UPDATE_MESSAGE = "UPDATE_MESSAGE";
 
 const store = {
@@ -89,7 +89,7 @@ const store = {
         } else if (action.type === UPDATE_POST_MESSAGE) {
             this._state.profilePage.newPostMessage = action.message
             this._callSubscriber(this._state)
-        } else if (action.type === ADD_MESSAGE) {
+        } else if (action.type === SEND_MESSAGE) {
             const newMessage = {
                 id: 5,
                 message: this._state.messagesPage.newMessage
@@ -98,7 +98,7 @@ const store = {
             this._state.messagesPage.newMessage = ''
             this._callSubscriber(this._state)
         } else if (action.type === UPDATE_MESSAGE) {
-            this._state.messagesPage.newMessage = action.message
+            this._state.messagesPage.newMessage = action.body
             this._callSubscriber(this._state)
         }
     },
@@ -119,14 +119,14 @@ export const updatePostActionCreator = (message) => {
 
 export const addMessageActionCreator = () => {
     return {
-        type: ADD_MESSAGE,
+        type: SEND_MESSAGE,
     }
 }
 
 export const updateMessageActionCreator = (message) => {
     return {
         type: UPDATE_MESSAGE,
-        message: message
+        body: message
     }
 }
 
