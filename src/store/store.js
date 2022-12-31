@@ -95,7 +95,7 @@ const store = {
             this._state.messagesPage.newMessage = ''
             this._callSubscriber(this._state)
         } else if (action.type === UPDATE_MESSAGE) {
-            this._state.messagesPage.newMessage = action.body
+            this._state.messagesPage.newMessage = action.message
             this._callSubscriber(this._state)
         }
     },
@@ -123,7 +123,7 @@ export const sendMessageCreator = () => {
 export const updateMessageCreator = (message) => {
     return {
         type: UPDATE_MESSAGE,
-        body: message
+        message: message
     }
 }
 
