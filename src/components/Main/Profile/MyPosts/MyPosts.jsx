@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css"
-import {addPostActionCreator, updatePostActionCreator} from "../../../../store/store";
+import {addPostCreator, updatePostCreator} from "../../../../store/store";
 
 
 const MyPosts = (props) => {
@@ -9,12 +9,12 @@ const MyPosts = (props) => {
     const postRef = React.createRef()
 
     const addPost = () => {
-        props.dispatch(addPostActionCreator())
+        props.dispatch(addPostCreator())
     }
 
     const onPostChange = () => {
         const message = postRef.current.value
-        const action = updatePostActionCreator(message)
+        const action = updatePostCreator(message)
         props.dispatch(action)
     }
 

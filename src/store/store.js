@@ -101,26 +101,26 @@ const store = {
     },
 }
 
-export const addPostActionCreator = () => {
+export const addPostCreator = () => {
     return {
         type: ADD_POST
     }
 }
 
-export const updatePostActionCreator = (message) => {
+export const updatePostCreator = (message) => {
     return {
         type: UPDATE_POST_MESSAGE,
         message: message
     }
 }
 
-export const sendMessageActionCreator = () => {
+export const sendMessageCreator = () => {
     return {
         type: SEND_MESSAGE,
     }
 }
 
-export const updateMessageActionCreator = (message) => {
+export const updateMessageCreator = (message) => {
     return {
         type: UPDATE_MESSAGE,
         body: message
