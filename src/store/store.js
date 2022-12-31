@@ -90,11 +90,8 @@ const store = {
             this._state.profilePage.newPostMessage = action.message
             this._callSubscriber(this._state)
         } else if (action.type === SEND_MESSAGE) {
-            const newMessage = {
-                id: 5,
-                message: this._state.messagesPage.newMessage
-            }
-            this._state.messagesPage.messageData.push(newMessage)
+            const newMessage = this._state.messagesPage.newMessage
+            this._state.messagesPage.messageData.push({id: 5, message: newMessage})
             this._state.messagesPage.newMessage = ''
             this._callSubscriber(this._state)
         } else if (action.type === UPDATE_MESSAGE) {
