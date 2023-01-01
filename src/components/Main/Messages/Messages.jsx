@@ -7,14 +7,14 @@ import {sendMessageCreator, updateMessageCreator} from "../../../store/store";
 const Messages = (props) => {
     const namesRender = props.messagesPage.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
     const messagesRender = props.messagesPage.messageData.map(m => <Message key={m.id} message={m.message}/>)
-    const messageRef = React.createRef()
+    const messageTextValue = props.newMessage;
 
     const sendMessage = () => {
         props.dispatch(sendMessageCreator())
     }
 
-    const onMessageChange = () => {
-        const message = messageRef.current.value
+    const onMessageChange = (e) => {
+        let message = e.target.value
         const action = updateMessageCreator(message);
         props.dispatch(action)
     }
@@ -28,7 +28,7 @@ const Messages = (props) => {
                 {messagesRender}
             </div>
             <div>
-                <textarea ref={messageRef} onChange={onMessageChange} value={props.newMessage}/>
+                <textarea onChange={onMessageChange} value={messageTextValue}/>
                 <button onClick={sendMessage}>Отправить</button>
             </div>
         </section>
