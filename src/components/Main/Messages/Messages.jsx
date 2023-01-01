@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
-import {sendMessageCreator, updateMessageCreator} from "../../../store/store";
+import {sendMessageCreator, updateMessageCreator} from "../../../redux/store";
 
 const Messages = (props) => {
     const state = props.store.getState().messagesPage
