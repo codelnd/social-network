@@ -5,10 +5,10 @@ import Message from "./Message/Message";
 import {sendMessageCreator, updateMessageCreator} from "../../../store/store";
 
 const Messages = (props) => {
-    const namesRender = props.store.getState().messagesPage.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
-    const messagesRender = props.store.getState().messagesPage.messageData.map(m => <Message key={m.id} message={m.message}/>)
-    const messageTextValue = props.store.getState().messagesPage.newMessage;
-    console.log(props.store)
+    const state = props.store.getState().messagesPage
+    const namesRender = state.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
+    const messagesRender = state.messageData.map(m => <Message key={m.id} message={m.message}/>)
+    const messageTextValue = state.newMessage;
 
     const sendMessage = () => {
         props.store.dispatch(sendMessageCreator())
