@@ -1,4 +1,4 @@
-import {myPostsReducer} from "./myposts-reducer";
+import {profileReducer} from "./profile-reducer";
 import {messagesReducer} from "./messages-reducer";
 
 const ADD_POST = "ADD_POST";
@@ -80,7 +80,7 @@ const store = {
     },
 
     dispatch(action) {
-        myPostsReducer(this.getState().profilePage, action)
+        profileReducer(this.getState().profilePage, action)
         messagesReducer(this.getState().messagesPage, action)
         this._callSubscriber(this._state)
     },

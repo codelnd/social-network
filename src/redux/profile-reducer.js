@@ -1,7 +1,7 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_POST_MESSAGE = "UPDATE_POST";
 
-export const myPostsReducer = (state, action) => {
+export const profileReducer = (state, action) => {
     // switch (action.type) {
     //     case SEND_MESSAGE:
     //         return
