@@ -1,7 +1,7 @@
 const SEND_MESSAGE = "ADD_MESSAGE";
 const UPDATE_MESSAGE = "UPDATE_MESSAGE";
 
-export const messagesReducer = (state, action) => {
+const messagesReducer = (state, action) => {
     // switch (action.type) {
     //     case SEND_MESSAGE:
     //         return
@@ -16,3 +16,5 @@ export const messagesReducer = (state, action) => {
     }
     return state
 }
+
+export default messagesReducer;
