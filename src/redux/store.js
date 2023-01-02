@@ -1,3 +1,6 @@
+import {myPostsReducer} from "./myposts-reducer";
+import {messagesReducer} from "./messages-reducer";
+
 const ADD_POST = "ADD_POST";
 const UPDATE_POST_MESSAGE = "UPDATE_POST";
 const SEND_MESSAGE = "ADD_MESSAGE";
@@ -77,27 +80,9 @@ const store = {
     },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            const newPost = {
-                id: 4,
-                message: this._state.profilePage.newPostMessage,
-                likes: 0
-            }
-            this._state.profilePage.postData.push(newPost)
-            this._state.profilePage.newPostMessage = ''
-            this._callSubscriber(this._state)
-        } else if (action.type === UPDATE_POST_MESSAGE) {
-            this._state.profilePage.newPostMessage = action.message
-            this._callSubscriber(this._state)
-        } else if (action.type === SEND_MESSAGE) {
-            const newMessage = this._state.messagesPage.newMessage
-            this._state.messagesPage.messageData.push({id: 5, message: newMessage})
-            this._state.messagesPage.newMessage = ''
-            this._callSubscriber(this._state)
-        } else if (action.type === UPDATE_MESSAGE) {
-            this._state.messagesPage.newMessage = action.message
-            this._callSubscriber(this._state)
-        }
+        myPostsReducer(this.getState().profilePage, action)
+        messagesReducer(this.getState().messagesPage, action)
+        this._callSubscriber(this._state)
     },
 }
 
