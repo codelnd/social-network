@@ -1,6 +1,7 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_POST_MESSAGE = "UPDATE_POST";
 
+
 const profileReducer = (state, action) => {
     switch (action.type) {
         case ADD_POST:
@@ -22,3 +23,18 @@ const profileReducer = (state, action) => {
 }
 
 export default profileReducer;
+
+
+export const addPostCreator = () => {
+    return {
+        type: ADD_POST
+    }
+}
+
+export const updatePostCreator = (message) => {
+    return {
+        type: UPDATE_POST_MESSAGE,
+        message: message
+    }
+}
+

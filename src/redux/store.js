@@ -1,10 +1,6 @@
 import profileReducer from "./profile-reducer";
 import messagesReducer from "./messages-reducer";
 
-const ADD_POST = "ADD_POST";
-const UPDATE_POST_MESSAGE = "UPDATE_POST";
-const SEND_MESSAGE = "ADD_MESSAGE";
-const UPDATE_MESSAGE = "UPDATE_MESSAGE";
 
 const store = {
     _state: {
@@ -86,30 +82,5 @@ const store = {
     },
 }
 
-export const addPostCreator = () => {
-    return {
-        type: ADD_POST
-    }
-}
-
-export const updatePostCreator = (message) => {
-    return {
-        type: UPDATE_POST_MESSAGE,
-        message: message
-    }
-}
-
-export const sendMessageCreator = () => {
-    return {
-        type: SEND_MESSAGE,
-    }
-}
-
-export const updateMessageCreator = (message) => {
-    return {
-        type: UPDATE_MESSAGE,
-        message: message
-    }
-}
 
 export default store

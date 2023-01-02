@@ -18,3 +18,17 @@ const messagesReducer = (state, action) => {
 }
 
 export default messagesReducer;
+
+
+export const sendMessageCreator = () => {
+    return {
+        type: SEND_MESSAGE,
+    }
+}
+
+export const updateMessageCreator = (message) => {
+    return {
+        type: UPDATE_MESSAGE,
+        message: message
+    }
+}
