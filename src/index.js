@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from "react-dom/client";
 import {BrowserRouter} from "react-router-dom";
 import App from "./components/App/App";
-import store from "./redux/store";
+import store from "./redux/redux-store";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
