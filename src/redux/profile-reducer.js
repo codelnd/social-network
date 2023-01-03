@@ -2,6 +2,28 @@ const ADD_POST = "ADD_POST";
 const UPDATE_POST_MESSAGE = "UPDATE_POST";
 
 
+const initialState = {
+    postData: [
+        {
+            id: 1,
+            message: 'Всем привет',
+            likes: 10
+        },
+        {
+            id: 2,
+            message: 'Мой первый пост',
+            likes: 4
+        },
+        {
+            id: 3,
+            message: 'Освоил redux!',
+            likes: 99
+        },
+    ],
+    newPostMessage: '',
+}
+
+
 const profileReducer = (state, action) => {
     switch (action.type) {
         case ADD_POST:
