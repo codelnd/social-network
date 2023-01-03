@@ -7,6 +7,6 @@ const reducers = combineReducers({
     messagesPage: messagesReducer
 })
 
-const store = createStore()
+const store = createStore(reducers)
 
 export default store
