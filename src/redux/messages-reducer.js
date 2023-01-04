@@ -39,7 +39,7 @@ const initialState = {
     newMessage: '',
 }
 
-const messagesReducer = (state, action) => {
+const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
         case SEND_MESSAGE:
             const newMessage = state.newMessage

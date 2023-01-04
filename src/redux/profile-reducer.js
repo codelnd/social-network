@@ -1,7 +1,6 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_POST_MESSAGE = "UPDATE_POST";
 
-
 const initialState = {
     postData: [
         {
@@ -23,8 +22,7 @@ const initialState = {
     newPostMessage: '',
 }
 
-
-const profileReducer = (state, action) => {
+const profileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             const newPost = {
