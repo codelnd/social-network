@@ -54,7 +54,7 @@ export const addPostCreator = () => {
 export const updatePostCreator = (message) => {
     return {
         type: UPDATE_POST_MESSAGE,
-        message: message
+        message
     }
 }
 
