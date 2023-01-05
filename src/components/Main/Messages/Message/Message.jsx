@@ -3,7 +3,7 @@ import s from "./Message.module.css";
 
 const Message = (props) => {
     return (
-        <div className={s.message}>{props.message}</div>
+        <div>{props.message}</div>
     );
 };
 
