@@ -8,7 +8,7 @@ const MyPosts = (props) => {
     const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
     const postRef = React.createRef()
 
-    const addPost = () => {
+    const onAddPost = () => {
         props.addPost()
         // props.dispatch(addPostCreator())
     }
@@ -25,7 +25,7 @@ const MyPosts = (props) => {
             Посты
             <div>
                 <textarea ref={postRef} value={props.newPostMessage} onChange={onPostChange}/>
-                <button onClick={addPost} className={s.add}>Добавить пост</button>
+                <button onClick={onAddPost} className={s.add}>Добавить пост</button>
             </div>
             {postsRender}
         </section>
