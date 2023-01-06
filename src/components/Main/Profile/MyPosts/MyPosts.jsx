@@ -14,8 +14,9 @@ const MyPosts = (props) => {
 
     const onPostChange = () => {
         const message = postRef.current.value
-        const action = updatePostCreator(message)
-        props.dispatch(action)
+        props.updateNewPostText(message)
+        // const action = updatePostCreator(message)
+        // props.dispatch(action)
     }
 
     return (

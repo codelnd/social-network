@@ -13,14 +13,13 @@ const MyPostsContainer = (props) => {
         props.dispatch(addPostCreator())
     }
 
-    const onPostChange = () => {
-        const message = postRef.current.value
+    const onPostChange = (message) => {
         const action = updatePostCreator(message)
         props.dispatch(action)
     }
 
     return (
-        <MyPosts/>
+        <MyPosts updateNewPostText={onPostChange}/>
     );
 };
 
