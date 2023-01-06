@@ -9,7 +9,8 @@ const MyPosts = (props) => {
     const postRef = React.createRef()
 
     const addPost = () => {
-        props.dispatch(addPostCreator())
+        props.addPost()
+        // props.dispatch(addPostCreator())
     }
 
     const onPostChange = () => {
