@@ -10,14 +10,11 @@ const MyPosts = (props) => {
 
     const onAddPost = () => {
         props.addPost()
-        // props.dispatch(addPostCreator())
     }
 
     const onPostChange = () => {
         const message = postRef.current.value
         props.updateNewPostText(message)
-        // const action = updatePostCreator(message)
-        // props.dispatch(action)
     }
 
     return (
