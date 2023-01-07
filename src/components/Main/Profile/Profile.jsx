@@ -1,11 +1,12 @@
 import MyPosts from "./MyPosts/MyPosts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
     return (
         <section className='profile'>
             <ProfileInfo/>
-            <MyPosts postData={props.profilePage.postData} newPostMessage={props.profilePage.newPostMessage}
+            <MyPostsContainer postData={props.profilePage.postData} newPostMessage={props.profilePage.newPostMessage}
                      dispatch={props.dispatch}/>
         </section>
     )
