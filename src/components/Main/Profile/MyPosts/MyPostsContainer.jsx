@@ -6,9 +6,6 @@ import MyPosts from "./MyPosts";
 
 
 const MyPostsContainer = (props) => {
-    const postsRender = props.postData.map(p => <Post key={p.id} message={p.message} likes={p.likes}/>)
-    const postRef = React.createRef()
-
     const addPost = () => {
         props.dispatch(addPostCreator())
     }
