@@ -15,8 +15,7 @@ const MessagesContainer = (props) => {
         props.store.dispatch(sendMessageCreator())
     }
 
-    const updateNewMessageText = (e) => {
-        let message = e.target.value
+    const updateNewMessageText = (message) => {
         const action = updateMessageCreator(message);
         props.store.dispatch(action)
     }
