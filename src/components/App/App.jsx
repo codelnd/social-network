@@ -9,6 +9,7 @@ import News from "../Main/News/News";
 import Music from "../Main/Music/Music";
 import Settings from "../Main/Settings/Settings";
 import store from "../../redux/redux-store";
+import MessagesContainer from "../Main/Messages/MessagesContainer";
 
 const App = (props) => {
     return (
@@ -18,7 +19,7 @@ const App = (props) => {
             <Main>
                 <Routes>
                     <Route path='/profile' element={<Profile store={props.store} />}></Route>
-                    <Route path='/messages/*' element={<Messages store={props.store} />}></Route>
+                    <Route path='/messages/*' element={<MessagesContainer store={props.store} />}></Route>
                     <Route path='/news' element={<News/>}></Route>
                     <Route path='/music' element={<Music/>}></Route>
                     <Route path='/settings' element={<Settings/>}/>
