@@ -8,6 +8,7 @@ import {Route, Routes} from "react-router-dom";
 import News from "../Main/News/News";
 import Music from "../Main/Music/Music";
 import Settings from "../Main/Settings/Settings";
+import store from "../../redux/redux-store";
 
 const App = (props) => {
     return (
@@ -16,7 +17,7 @@ const App = (props) => {
             <Navigation/>
             <Main>
                 <Routes>
-                    <Route path='/profile' element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch}/>}></Route>
+                    <Route path='/profile' element={<Profile store={props.store} profilePage={props.state.profilePage} dispatch={props.dispatch}/>}></Route>
                     <Route path='/messages/*' element={<Messages store={props.store} />}></Route>
                     <Route path='/news' element={<News/>}></Route>
                     <Route path='/music' element={<Music/>}></Route>

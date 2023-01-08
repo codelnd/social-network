@@ -7,7 +7,7 @@ const MyPostsContainer = (props) => {
     const addPost = () => {
         props.dispatch(addPostCreator())
     }
-
+    
     const onPostChange = (message) => {
         const action = updatePostCreator(message)
         props.dispatch(action)
