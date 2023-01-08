@@ -9,14 +9,13 @@ const Messages = (props) => {
     const messagesRender = props.messageData.map(m => <Message key={m.id} message={m.message}/>)
     const messageTextValue = props.newMessage;
 
-    const sendMessage = () => {
-        props.store.dispatch(sendMessageCreator())
+    const onSendMessage = () => {
+        props.sendMessage();
     }
 
     const onMessageChange = (e) => {
         let message = e.target.value
-        const action = updateMessageCreator(message);
-        props.store.dispatch(action)
+        props.updateNewMessageText(message)
     }
 
     return (
@@ -29,7 +28,7 @@ const Messages = (props) => {
             </div>
             <div>
                 <textarea onChange={onMessageChange} value={messageTextValue}/>
-                <button onClick={sendMessage}>Отправить</button>
+                <button onClick={onSendMessage}>Отправить</button>
             </div>
         </section>
     );
