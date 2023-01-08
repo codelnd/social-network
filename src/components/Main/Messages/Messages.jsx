@@ -5,10 +5,9 @@ import Message from "./Message/Message";
 import {sendMessageCreator, updateMessageCreator} from "../../../redux/messages-reducer";
 
 const Messages = (props) => {
-    const state = props.store.getState().messagesPage
-    const namesRender = state.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
-    const messagesRender = state.messageData.map(m => <Message key={m.id} message={m.message}/>)
-    const messageTextValue = state.newMessage;
+    const namesRender = props.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)
+    const messagesRender = props.messageData.map(m => <Message key={m.id} message={m.message}/>)
+    const messageTextValue = props.newMessage;
 
     const sendMessage = () => {
         props.store.dispatch(sendMessageCreator())
