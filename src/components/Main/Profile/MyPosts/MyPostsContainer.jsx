@@ -10,13 +10,13 @@ const MyPostsContainer = (props) => {
         props.store.dispatch(addPostCreator())
     }
 
-    const onPostChange = (message) => {
+    const updateNewPostText = (message) => {
         const action = updatePostCreator(message)
         props.store.dispatch(action)
     }
 
     return (
-        <MyPosts addPost={addPost} updateNewPostText={onPostChange} postData={state.postData} newPostMessage={state.newPostMessage}/>
+        <MyPosts addPost={addPost} updateNewPostText={updateNewPostText} postData={state.postData} newPostMessage={state.newPostMessage}/>
     );
 };
 
