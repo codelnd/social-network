@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Messages.module.css'
 import Name from "./Name/Name";
 import Message from "./Message/Message";
-import {sendMessageCreator, updateMessageCreator} from "../../../redux/messages-reducer";
+
 
 const Messages = (props) => {
     const namesRender = props.nameData.map(n => <Name key={n.id} id={n.id} name={n.name}/>)

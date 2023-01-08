@@ -2,13 +2,11 @@ import s from './App.module.css'
 import Header from "../Header/Header";
 import Navigation from "../Navigation/Navigation";
 import Profile from "../Main/Profile/Profile";
-import Messages from "../Main/Messages/Messages";
 import Main from "../Main/Main";
 import {Route, Routes} from "react-router-dom";
 import News from "../Main/News/News";
 import Music from "../Main/Music/Music";
 import Settings from "../Main/Settings/Settings";
-import store from "../../redux/redux-store";
 import MessagesContainer from "../Main/Messages/MessagesContainer";
 
 const App = (props) => {
