@@ -1,1 +1,3 @@
-const MyContext = React.createContext()
+const MyContext = React.createContext(null)
+
+export default MyContext
