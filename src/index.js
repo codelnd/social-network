@@ -9,7 +9,7 @@ import MyContext from "./MyContext";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const rerender = (state) => {
+const rerender = () => {
     root.render(
         <BrowserRouter>
             <MyContext.Provider value={store}>
@@ -19,6 +19,6 @@ const rerender = (state) => {
     );
 }
 
-rerender(store.getState())
+rerender()
 
-store.subscribe(() => rerender(store.getState()))
+store.subscribe(rerender)
