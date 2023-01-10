@@ -13,7 +13,7 @@ const rerender = () => {
     root.render(
         <BrowserRouter>
             <MyContext.Provider value={store}>
-                <App />
+                <App store={store}/>
             </MyContext.Provider>
         </BrowserRouter>
     );
