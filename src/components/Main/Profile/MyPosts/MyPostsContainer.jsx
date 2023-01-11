@@ -17,8 +17,11 @@ const MyPostsContainer = (props) => {
     }
 
     return (
-        <MyContext.Consumer>
-        <MyPosts addPost={addPost} updateNewPostText={updateNewPostText} postData={state.postData} newPostMessage={state.newPostMessage}/>
+        <MyContext.Consumer> {
+            (store) => (
+                <MyPosts addPost={addPost} updateNewPostText={updateNewPostText} postData={state.postData} newPostMessage={state.newPostMessage}/>
+                )
+        }
         </MyContext.Consumer>
     );
 };
