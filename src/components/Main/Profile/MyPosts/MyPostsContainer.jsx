@@ -1,6 +1,7 @@
 import React from 'react';
 import {addPostCreator, updatePostCreator} from "../../../../redux/profile-reducer";
 import MyPosts from "./MyPosts";
+import MyContext from "../../../../MyContext";
 
 
 const MyPostsContainer = (props) => {
@@ -16,7 +17,9 @@ const MyPostsContainer = (props) => {
     }
 
     return (
+        <MyContext.Consumer>
         <MyPosts addPost={addPost} updateNewPostText={updateNewPostText} postData={state.postData} newPostMessage={state.newPostMessage}/>
+        </MyContext.Consumer>
     );
 };
 
