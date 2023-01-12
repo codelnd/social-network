@@ -17,12 +17,27 @@ const MyPostsContainer = (props) => {
     }
 
     return (
-        <MyContext.Consumer> {
-            (store) => (
-                <MyPosts addPost={addPost} updateNewPostText={updateNewPostText} postData={state.postData} newPostMessage={state.newPostMessage}/>
-                )
-        }
-        </MyContext.Consumer>
+        // <MyContext.Consumer> {
+        //     (store) => {
+        //         const state = store.getState().profilePage;
+        //
+        //         const addPost = () => {
+        //             store.dispatch(addPostCreator())
+        //         }
+        //
+        //         const updateNewPostText = (message) => {
+        //             const action = updatePostCreator(message)
+        //             store.dispatch(action)
+        //         }
+        //         return <MyPosts addPost={addPost} updateNewPostText={updateNewPostText}
+        //                      postData={state.postData}
+        //                      newPostMessage={state.newPostMessage}/>
+        //     }
+        // }
+        // </MyContext.Consumer>
+        <MyPosts addPost={addPost} updateNewPostText={updateNewPostText}
+                 postData={state.postData}
+                 newPostMessage={state.newPostMessage}/>
     );
 };
 
